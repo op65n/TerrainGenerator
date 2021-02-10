@@ -1,0 +1,6 @@
+name: TerrainGenerator
+version: @version@
+main: op65n.tech.terraingenerator.TerrainGeneratorPlugin
+api-version: 1.16
+author: Frcsty
+load: STARTUP
