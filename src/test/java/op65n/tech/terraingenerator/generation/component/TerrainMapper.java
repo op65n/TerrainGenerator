@@ -7,11 +7,11 @@ import java.awt.image.BufferedImage;
 public final class TerrainMapper extends JPanel {
 
     public TerrainMapper(final float[][] noiseMap) {
-        final BufferedImage image = new BufferedImage(1000, 1000, BufferedImage.TYPE_INT_RGB);
+        final BufferedImage image = new BufferedImage(800, 800, BufferedImage.TYPE_INT_RGB);
         final ImageIcon icon = new ImageIcon(image);
         add(new JLabel(icon));
 
-        for (int z = 0; z < noiseMap.length; z++) {
+        for (int z = 100; z < noiseMap.length; z++) {
             for (int x = 0; x < noiseMap[1].length; x++) {
                 float value;
                 try {
