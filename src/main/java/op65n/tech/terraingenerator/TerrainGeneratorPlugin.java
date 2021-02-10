@@ -1,5 +1,6 @@
 package op65n.tech.terraingenerator;
 
+import op65n.tech.terraingenerator.database.DataSource;
 import op65n.tech.terraingenerator.world.impl.PerlinGeneratorTest;
 import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -8,6 +9,12 @@ import org.jetbrains.annotations.Nullable;
 
 @SuppressWarnings("unused")
 public final class TerrainGeneratorPlugin extends JavaPlugin {
+
+    @Override
+    public void onEnable() {
+        super.onEnable();
+        DataSource.init();
+    }
 
     @Override
     public ChunkGenerator getDefaultWorldGenerator(@NotNull String worldName, @Nullable String id) {
