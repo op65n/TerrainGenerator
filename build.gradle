@@ -4,3 +4,7 @@ plugins {
 
 group "op65n.tech.terrainrenderer"
 version "1.0-SNAPSHOT"
+
+subprojects {
+    apply plugin: "java"
+}

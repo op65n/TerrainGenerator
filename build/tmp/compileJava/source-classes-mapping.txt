@@ -16,10 +16,10 @@ op65n/tech/terraingeneration/renderer/view/component/ButtonComponent.java
  op65n.tech.terraingeneration.renderer.view.component.ButtonComponent
 op65n/tech/terraingeneration/terrain/TerrainGeneration.java
  op65n.tech.terraingeneration.terrain.TerrainGeneration
-op65n/tech/terraingeneration/renderer/ImageRenderer.java
- op65n.tech.terraingeneration.renderer.ImageRenderer
 op65n/tech/terraingeneration/MappedImageProvider.java
  op65n.tech.terraingeneration.MappedImageProvider
 op65n/tech/terraingeneration/renderer/view/TerrainView.java
  op65n.tech.terraingeneration.renderer.view.TerrainView
  op65n.tech.terraingeneration.renderer.view.TerrainView$1
+op65n/tech/terraingeneration/renderer/ImageRenderer.java
+ op65n.tech.terraingeneration.renderer.ImageRenderer
