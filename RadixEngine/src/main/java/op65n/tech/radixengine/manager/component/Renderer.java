@@ -1,28 +1,30 @@
-package op65n.tech.radixengine.component;
+package op65n.tech.radixengine.manager.component;
 
-import op65n.tech.radixengine.component.asset.Font;
+import op65n.tech.radixengine.manager.component.asset.Font;
 
 import java.awt.*;
-import java.awt.image.DataBufferInt;
-import java.util.Arrays;
+import java.awt.image.BufferedImage;
 
 public final class Renderer {
 
     private final int pixelWidth;
     private final int pixelHeight;
-    private final int[] pixels;
+    private final BufferedImage image;
 
     private final Font font = Font.DEFAULT;
 
     public Renderer(final Container container) {
         this.pixelWidth = container.getWidth();
         this.pixelHeight = container.getHeight();
-
-        this.pixels = ((DataBufferInt) container.getWindow().getImage().getRaster().getDataBuffer()).getData();
+        this.image = container.getWindow().getImage();
     }
 
     public void clear() {
-        Arrays.fill(this.pixels, 0);
+        for (int y = 0; y < this.pixelHeight; y++) {
+            for (int x = 0; x < this.pixelWidth; x++) {
+                this.image.setRGB(x, y, 0);
+            }
+        }
     }
 
     public void drawText(final String text, final int offsetX, final int offsetY, final Color color) {
@@ -41,7 +43,7 @@ public final class Renderer {
     public void drawPixel(final int x, final int y, final Color color) {
         if (x < 0 || x >= this.pixelWidth || y < 0 || y >= this.pixelHeight) return;
 
-        this.pixels[x + y + this.pixelWidth] = color.getRGB();
+        this.image.setRGB(x, y, color.getRGB());
     }
 
 }

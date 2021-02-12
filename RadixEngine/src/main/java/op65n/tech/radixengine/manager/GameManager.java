@@ -1,31 +1,25 @@
 package op65n.tech.radixengine.manager;
 
 import op65n.tech.radixengine.GameObject;
-import op65n.tech.radixengine.component.Container;
-import op65n.tech.radixengine.component.Renderer;
+import op65n.tech.radixengine.execute.impl.Executioner;
 
-public final class GameManager implements GameObject {
+import javax.swing.*;
 
-    private Runnable drawable;
+public final class GameManager extends GameObject {
 
-    public void setDrawable(final Runnable runnable) {
-        this.drawable = runnable;
+    private final JFrame frame = new JFrame();
+    private final Executioner executioner = new Executioner();
+
+    @Override
+    public void start(Runnable runnable) {
+
     }
 
     @Override
-    public void update(final Container container, final Renderer renderer) {
-        renderer.clear();
+    public void stop(Runnable runnable) {
 
-        if (drawable != null)
-            drawable.run();
     }
 
-    @Override
-    public void render(final Container container, final Renderer renderer) {
-        renderer.clear();
 
-        if (drawable != null)
-            drawable.run();
-    }
 
 }

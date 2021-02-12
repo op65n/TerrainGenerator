@@ -1,6 +1,6 @@
 package op65n.tech.terraingeneration.renderer.view;
 
-import op65n.tech.radixengine.component.Container;
+import op65n.tech.radixengine.manager.component.Container;
 import op65n.tech.radixengine.manager.GameManager;
 import op65n.tech.terraingeneration.renderer.ImageRenderer;
 import op65n.tech.terraingeneration.terrain.TerrainGeneration;
@@ -31,9 +31,9 @@ public final class TerrainView {
             renderer.render(container);
             System.out.println("Called Render method");
         });
-        container.getRenderer().drawText("THIS IS A TEST", 0, 10, Color.WHITE);
 
-        container.start();
+        container.getRenderer().drawText("THIS IS A TEST", 0, 10, Color.WHITE);
+        container.update();
     }
 
 }

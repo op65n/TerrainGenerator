@@ -1,12 +1,11 @@
 package op65n.tech.radixengine;
 
-import op65n.tech.radixengine.component.Container;
-import op65n.tech.radixengine.component.Renderer;
+import javax.swing.*;
 
-public interface GameObject {
+public abstract class GameObject extends JFrame {
 
-    void update(Container container, Renderer renderer);
+    public abstract void start(Runnable runnable);
 
-    void render(Container container, Renderer renderer);
+    public abstract void stop(Runnable runnable);
 
 }

@@ -1,6 +1,6 @@
 package op65n.tech.terraingeneration.renderer;
 
-import op65n.tech.radixengine.component.Container;
+import op65n.tech.radixengine.manager.component.Container;
 import op65n.tech.terraingeneration.renderer.map.ImageMapper;
 import op65n.tech.terraingeneration.terrain.TerrainGeneration;
 

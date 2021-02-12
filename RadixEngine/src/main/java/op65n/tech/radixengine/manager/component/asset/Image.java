@@ -1,4 +1,4 @@
-package op65n.tech.radixengine.component.asset;
+package op65n.tech.radixengine.manager.component.asset;
 
 import java.awt.image.BufferedImage;
 

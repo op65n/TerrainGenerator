@@ -14,9 +14,9 @@ op65n/tech/terraingeneration/renderer/map/ImageMapper.java
  op65n.tech.terraingeneration.renderer.map.ImageMapper
 op65n/tech/terraingeneration/terrain/TerrainGeneration.java
  op65n.tech.terraingeneration.terrain.TerrainGeneration
-op65n/tech/terraingeneration/renderer/ImageRenderer.java
- op65n.tech.terraingeneration.renderer.ImageRenderer
 op65n/tech/terraingeneration/MappedImageProvider.java
  op65n.tech.terraingeneration.MappedImageProvider
 op65n/tech/terraingeneration/renderer/view/TerrainView.java
  op65n.tech.terraingeneration.renderer.view.TerrainView
+op65n/tech/terraingeneration/renderer/ImageRenderer.java
+ op65n.tech.terraingeneration.renderer.ImageRenderer
