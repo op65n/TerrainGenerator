@@ -9,10 +9,11 @@ op65n/tech/radixengine/view/component/WindowProperty.java
 op65n/tech/radixengine/view/component/WindowConstraint.java
  op65n.tech.radixengine.view.component.WindowConstraint
  op65n.tech.radixengine.view.component.WindowConstraint$WindowBuilder
-op65n/tech/radixengine/view/component/draw/Renderer.java
- op65n.tech.radixengine.view.component.draw.Renderer
 op65n/tech/radixengine/view/GameWindow.java
  op65n.tech.radixengine.view.GameWindow
  op65n.tech.radixengine.view.GameWindow$Display
 op65n/tech/radixengine/GameWindowTest.java
  op65n.tech.radixengine.GameWindowTest
+op65n/tech/radixengine/view/component/draw/Renderer.java
+ op65n.tech.radixengine.view.component.draw.Renderer
+ op65n.tech.radixengine.view.component.draw.Renderer$RectangleType

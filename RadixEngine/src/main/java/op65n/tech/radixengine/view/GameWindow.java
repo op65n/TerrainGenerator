@@ -10,7 +10,6 @@ import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.util.function.Consumer;
 
-@SuppressWarnings("MagicConstant")
 public final class GameWindow {
 
     private final JFrame frame;
