@@ -1,10 +1,8 @@
 package op65n.tech.terrainrenderer.terrain;
 
 import op65n.tech.terrainrenderer.perlin.impl.PerlinNoiseGenerator;
-import op65n.tech.terrainrenderer.terrain.height.HeightMap;
 import op65n.tech.terrainrenderer.terrain.setting.TerrainSetting;
 import op65n.tech.terrainrenderer.terrain.setting.object.OctaveOffset;
-import op65n.tech.terrainrenderer.util.Math;
 
 import java.util.SplittableRandom;
 
@@ -47,7 +45,7 @@ public final class ProceduralTerrainGeneration {
                     final float sampleY = (float) ((y + chunkZ << 4) / this.setting.getScale() * frequency + octaveOffsets[index].getY());
 
                     float perlinValue = (float) GENERATOR.noise(sampleX, sampleY) * 2 - 1;
-                    //perlinValue = (float) HeightMap.getMultiplierForHeight(perlinValue) * perlinValue;
+                    perlinValue = (float) ((java.lang.Math.abs(perlinValue) * 2 + perlinValue) / this.setting.getScale());
                     noiseHeight += perlinValue * amplitude;
 
                     amplitude *= this.setting.getPersistence();
@@ -60,13 +58,6 @@ public final class ProceduralTerrainGeneration {
                     minNoiseHeight = noiseHeight;
 
                 noiseMap[x][y] = noiseHeight;
-                System.out.println(noiseHeight);
-            }
-        }
-
-        for (int y = 0; y < 16; y++) {
-            for (int x = 0; x < 16; x++) {
-                noiseMap[x][y] = Math.inverseLerp(minNoiseHeight, maxNoiseHeight, noiseMap[x][y]);
             }
         }
 

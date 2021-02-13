@@ -1,15 +1,15 @@
 op65n/tech/terraingeneration/terrain/util/TerrainUtil.java
  op65n.tech.terraingeneration.terrain.util.TerrainUtil
-op65n/tech/terraingeneration/world/impl/PerlinGenerator.java
- op65n.tech.terraingeneration.world.impl.PerlinGenerator
+op65n/tech/terraingeneration/terrain/populator/impl/GrassPopulator.java
+ op65n.tech.terraingeneration.terrain.populator.impl.GrassPopulator
 op65n/tech/terraingeneration/terrain/populator/TerrainPopulator.java
  op65n.tech.terraingeneration.terrain.populator.TerrainPopulator
 op65n/tech/terraingeneration/world/TerrainGenerator.java
  op65n.tech.terraingeneration.world.TerrainGenerator
 op65n/tech/terraingeneration/world/util/Task.java
  op65n.tech.terraingeneration.world.util.Task
-op65n/tech/terraingeneration/terrain/populator/impl/GrassPopulator.java
- op65n.tech.terraingeneration.terrain.populator.impl.GrassPopulator
+op65n/tech/terraingeneration/world/impl/PerlinGenerator.java
+ op65n.tech.terraingeneration.world.impl.PerlinGenerator
 op65n/tech/terraingeneration/world/impl/InfinitePerlinGenerator.java
  op65n.tech.terraingeneration.world.impl.InfinitePerlinGenerator
 op65n/tech/terraingeneration/TerrainGeneratorPlugin.java

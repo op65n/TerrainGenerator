@@ -9,6 +9,10 @@ public final class Math {
             return 0.0F;
     }
 
+    public static float lerp(final float a, final float b, final float value) {
+        return  a + (b - a) * clamp(value);
+    }
+
     public static float clamp(final float value) {
         if (value < 0F)
             return 0F;
