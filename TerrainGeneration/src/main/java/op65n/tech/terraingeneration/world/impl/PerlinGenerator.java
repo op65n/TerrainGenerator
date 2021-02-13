@@ -1,6 +1,7 @@
 package op65n.tech.terraingeneration.world.impl;
 
 import op65n.tech.terraingeneration.terrain.populator.impl.GrassPopulator;
+import op65n.tech.terraingeneration.terrain.util.TerrainUtil;
 import op65n.tech.terraingeneration.world.TerrainGenerator;
 import op65n.tech.terrainrenderer.terrain.TerrainGeneration;
 import op65n.tech.terrainrenderer.terrain.setting.TerrainSetting;
@@ -19,7 +20,7 @@ public final class PerlinGenerator extends TerrainGenerator {
 
     private static final int HEIGHT_NORMALIZATION = 60;
     private static final TerrainGeneration GENERATION = new TerrainGeneration(new TerrainSetting(
-            100, 50000, 5000, 5, 2.0, 0.5, 0, new OctaveOffset(0, 0))
+            1000, 1000, 5000, 5, 2.0, 0.5, 130102, new OctaveOffset(0, 0))
     );
 
     @NotNull
@@ -49,42 +50,13 @@ public final class PerlinGenerator extends TerrainGenerator {
 
                 data.setBlock(x, 0, z, Material.BEDROCK);
 
-                generateFloor(data, x, y, z);
-                generateBeach(data, x, y, z);
-                generateWater(data, x, y, z);
+                TerrainUtil.generateFloor(data, x, y, z);
+                TerrainUtil.generateBeach(data, x, y, z);
+                TerrainUtil.generateWater(data, x, y, z);
             }
         }
 
         return data;
-    }
-
-    private void generateFloor(@NotNull final ChunkData data, final int x, final int y, final int z) {
-        if (y > 63)
-            data.setBlock(x, y, z, Material.GRASS_BLOCK);
-        else if (y > 56 && y < 63)
-            data.setBlock(x, y, z, Material.SAND);
-        else
-            data.setBlock(x, y, z, Material.GRAVEL);
-    }
-
-    private void generateBeach(@NotNull final ChunkGenerator.ChunkData data, final int x, final int y, final int z) {
-        if (y > 65 || y < 60) return;
-
-        for (int height = 65; height > 55; height--) {
-            if (data.getType(x, height, z) == Material.AIR) continue;
-
-            data.setBlock(x, height, z, Material.SAND);
-        }
-    }
-
-    private void generateWater(@NotNull final ChunkGenerator.ChunkData data, final int x, final int y, final int z) {
-        if (y > 60) return;
-
-        for (int height = 60; height > y; height--) {
-            if (data.getType(x, height, z) != Material.AIR) continue;
-
-            data.setBlock(x, height, z, Material.WATER);
-        }
     }
 
     @NotNull

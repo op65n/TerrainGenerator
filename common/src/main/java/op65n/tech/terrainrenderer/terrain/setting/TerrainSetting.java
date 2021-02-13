@@ -26,6 +26,18 @@ public final class TerrainSetting {
         this.offset = octaveOffset;
     }
 
+    public TerrainSetting(final double scale,
+                          final int octaves, final double lacunarity, final double persistence,
+                          final long seed, final OctaveOffset octaveOffset) {
+        this.width = 0;
+        this.height = 0;
+        this.scale = scale;
+        this.octaves = octaves;
+        this.lacunarity = lacunarity;
+        this.persistence = persistence;
+        this.seed = seed;
+        this.offset = octaveOffset;
+    }
 
     public OctaveOffset getOffset() {
         return offset;
