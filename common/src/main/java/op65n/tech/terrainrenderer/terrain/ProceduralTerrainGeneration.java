@@ -47,7 +47,7 @@ public final class ProceduralTerrainGeneration {
                     final float sampleY = (float) ((y + chunkZ << 4) / this.setting.getScale() * frequency + octaveOffsets[index].getY());
 
                     float perlinValue = (float) GENERATOR.noise(sampleX, sampleY) * 2 - 1;
-                    perlinValue = (float) HeightMap.getMultiplierForHeight(perlinValue) * perlinValue;
+                    //perlinValue = (float) HeightMap.getMultiplierForHeight(perlinValue) * perlinValue;
                     noiseHeight += perlinValue * amplitude;
 
                     amplitude *= this.setting.getPersistence();
@@ -60,6 +60,7 @@ public final class ProceduralTerrainGeneration {
                     minNoiseHeight = noiseHeight;
 
                 noiseMap[x][y] = noiseHeight;
+                System.out.println(noiseHeight);
             }
         }
 
