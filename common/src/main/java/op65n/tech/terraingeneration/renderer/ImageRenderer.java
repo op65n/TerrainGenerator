@@ -1,7 +1,5 @@
 package op65n.tech.terraingeneration.renderer;
 
-import op65n.tech.radixengine.manager.component.Container;
-import op65n.tech.terraingeneration.renderer.map.ImageMapper;
 import op65n.tech.terraingeneration.terrain.TerrainGeneration;
 
 public final class ImageRenderer {
@@ -12,7 +10,7 @@ public final class ImageRenderer {
         this.generation = generation;
     }
 
-    public void render(final Container container) {
+    public void render() {
         final float[][] noiseMap = generation.getNoiseMap();
 
         for (int z = 0; z < noiseMap.length; z++) {
@@ -24,7 +22,6 @@ public final class ImageRenderer {
                     continue;
                 }
 
-                container.getRenderer().drawPixel(x, z, ImageMapper.getColorForHeight(value));
             }
         }
     }
