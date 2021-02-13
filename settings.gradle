@@ -1,4 +1,6 @@
  include(
          "common",
-         "RadixEngine"
+         "RadixEngine",
+         "TerrainGeneration",
+         "TerrainRendering"
  )
