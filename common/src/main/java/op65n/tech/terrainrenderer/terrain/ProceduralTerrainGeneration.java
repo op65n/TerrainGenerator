@@ -3,6 +3,7 @@ package op65n.tech.terrainrenderer.terrain;
 import op65n.tech.terrainrenderer.perlin.impl.PerlinNoiseGenerator;
 import op65n.tech.terrainrenderer.terrain.setting.TerrainSetting;
 import op65n.tech.terrainrenderer.terrain.setting.object.OctaveOffset;
+import op65n.tech.terrainrenderer.util.Math;
 
 import java.util.SplittableRandom;
 
@@ -58,6 +59,16 @@ public final class ProceduralTerrainGeneration {
                     minNoiseHeight = noiseHeight;
 
                 noiseMap[x][y] = noiseHeight;
+            }
+        }
+
+        for (int y = 0; y < 16; y++) {
+            for (int x = 0; x < 16; x++) {
+                final float value = noiseMap[x][y];
+                final float mappedValue = Math.map(value, 0F, 3F, 60, 180);
+
+                System.out.printf("Noise Value: %s, Mapped Value: %s\n", value, mappedValue);
+                noiseMap[x][y] = mappedValue;
             }
         }
 

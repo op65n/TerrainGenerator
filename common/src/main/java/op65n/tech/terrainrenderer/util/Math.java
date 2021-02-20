@@ -10,7 +10,7 @@ public final class Math {
     }
 
     public static float lerp(final float a, final float b, final float value) {
-        return  a + (b - a) * clamp(value);
+        return a + (b - a) * clamp(value);
     }
 
     public static float clamp(final float value) {
@@ -19,6 +19,10 @@ public final class Math {
         else if (value > 1F)
             return 1F;
         return value;
+    }
+
+    public static float map(final float value, final float inMinimum, final float inMaximum, final float outMinimum, final float outMaximum) {
+        return (value - inMinimum) * (outMaximum - outMinimum + 1) / (inMaximum - inMinimum + 1) + outMinimum;
     }
 
 }

@@ -1,15 +1,15 @@
 op65n/tech/terrainrenderer/terrain/setting/TerrainSetting.java
  op65n.tech.terrainrenderer.terrain.setting.TerrainSetting
-op65n/tech/terrainrenderer/perlin/impl/PerlinNoiseGenerator.java
- op65n.tech.terrainrenderer.perlin.impl.PerlinNoiseGenerator
+op65n/tech/terrainrenderer/terrain/TerrainGeneration.java
+ op65n.tech.terrainrenderer.terrain.TerrainGeneration
 op65n/tech/terrainrenderer/terrain/height/HeightMap.java
  op65n.tech.terrainrenderer.terrain.height.HeightMap
+op65n/tech/terrainrenderer/perlin/impl/PerlinNoiseGenerator.java
+ op65n.tech.terrainrenderer.perlin.impl.PerlinNoiseGenerator
 op65n/tech/terrainrenderer/perlin/NoiseGenerator.java
  op65n.tech.terrainrenderer.perlin.NoiseGenerator
 op65n/tech/terrainrenderer/terrain/setting/object/OctaveOffset.java
  op65n.tech.terrainrenderer.terrain.setting.object.OctaveOffset
-op65n/tech/terrainrenderer/terrain/TerrainGeneration.java
- op65n.tech.terrainrenderer.terrain.TerrainGeneration
 op65n/tech/terrainrenderer/util/Math.java
  op65n.tech.terrainrenderer.util.Math
 op65n/tech/terrainrenderer/terrain/ProceduralTerrainGeneration.java

@@ -9,9 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/RadixEngine" />
             <option value="$PROJECT_DIR$/TerrainGeneration" />
-            <option value="$PROJECT_DIR$/TerrainRendering" />
             <option value="$PROJECT_DIR$/common" />
           </set>
         </option>
